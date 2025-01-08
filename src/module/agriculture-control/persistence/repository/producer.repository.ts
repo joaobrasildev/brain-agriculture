@@ -23,6 +23,19 @@ export class ProducerRepository extends DefaultTypeOrmRepository<ProducerEntity>
     return this.entityToModel(producer);
   }
 
+  async getProducerByDocumentId(
+    documentId: string,
+  ): Promise<ProducerModel | undefined> {
+    const producer = await this.repository.findOne({
+      where: {
+        documentId,
+      },
+    });
+    if (!producer) return;
+
+    return producer;
+  }
+
   async deleteproducerById(id: string): Promise<void> {
     await this.repository.softDelete({ id });
   }

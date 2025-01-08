@@ -4,6 +4,9 @@ import { TypeOrmPersistenceModule } from '@src/shared/persistence/typeorm/typeor
 import { ProducerEntity } from './entity/producer.entity';
 import { FarmEntity } from './entity/farm.entity';
 import { AgriculturalCropsEntity } from './entity/agricultural-crops.entity';
+import { ProducerRepository } from './repository/producer.repository';
+import { FarmRepository } from './repository/farm.repository';
+import { AgriculturalCropsRepository } from './repository/agricultural-crops.repository';
 
 @Module({})
 export class PersistenceModule {
@@ -18,8 +21,16 @@ export class PersistenceModule {
         }),
         ConfigModule.forRoot(),
       ],
-      providers: [],
-      exports: [],
+      providers: [
+        ProducerRepository,
+        FarmRepository,
+        AgriculturalCropsRepository,
+      ],
+      exports: [
+        ProducerRepository,
+        FarmRepository,
+        AgriculturalCropsRepository,
+      ],
     };
   }
 }
