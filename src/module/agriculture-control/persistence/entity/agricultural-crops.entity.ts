@@ -24,7 +24,7 @@ export class AgriculturalCropsEntity extends DefaultEntity<AgriculturalCropsEnti
     enum: ELandUse,
     enumName: 'landUse',
   })
-  Landuse: ELandUse;
+  landuse: ELandUse;
 
   @Column({ nullable: false, type: 'int' })
   area: number;
