@@ -52,6 +52,7 @@ export class CreateProducerService {
         createdAt: producer.createdAt,
       };
     } catch (error) {
+      console.log(error);
       if (
         error instanceof BadRequestException ||
         error instanceof ConflictException
