@@ -7,7 +7,7 @@ const databaseSchema = z.object({
   database: z.string(),
   password: z.string(),
   port: z.coerce.number(),
-  url: z.string().startsWith('postgresql://'),
+  url: z.string(),
   username: z.string(),
 });
 
