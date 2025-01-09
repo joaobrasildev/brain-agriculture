@@ -39,3 +39,29 @@ $ npm run db:migrate
 ```bash
 $ npm run start
 ```
+
+# To run unit test
+
+```bash
+$ npm run test
+```
+
+# To run e2e test
+
+- Navigate to the src/module/agriculture-control/\_\_test\_\_ folder and RUN
+
+```bash
+$ docker compose up -d
+```
+
+- apply migrations on database test:
+
+```bash
+$ npm run test:db:setup
+```
+
+- execute e2e tests RUN
+
+```bash
+$ npm run test:e2e
+```
