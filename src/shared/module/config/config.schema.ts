@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const environmentSchema = z.enum(['test', 'development', 'production']);
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV == 'production';
 
 const databaseSchema = z.object({
   host: z.string(),
