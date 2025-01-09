@@ -26,6 +26,9 @@ export class TypeOrmPersistenceModule {
               migrationsTableName: 'typeorm_migrations',
               ...configService.get('database'),
               ...options,
+              ssl: {
+                rejectUnauthorized: false,
+              },
             };
           },
         }),
