@@ -10,11 +10,11 @@ const databaseSchema = z.object({
   password: z.string(),
   port: z.coerce.number(),
   url: z.string(),
-  username: isProduction ? z.string().optional() : z.string(),
+  username: z.string(),
 });
 
 export const configSchema = z.object({
   env: environmentSchema,
   port: z.coerce.number().positive().int(),
-  database: databaseSchema,
+  database: isProduction ? z.string().optional() : databaseSchema,
 });
