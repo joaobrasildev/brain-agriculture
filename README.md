@@ -4,6 +4,10 @@
 
 [Doc OpenApi](https://brain-agriculture-app-f5f681bfb210.herokuapp.com/api).
 
+[Dashboard Total de Fazendas](https://jb-tecnology.metabaseapp.com/public/dashboard/cc8c54ab-a2de-40be-8253-3a5a809f4a38)
+
+[Dashboard Total de Hectares](https://jb-tecnology.metabaseapp.com/public/dashboard/9a33594c-0949-4b01-906c-1e2bc49f8a31)
+
 # Requirements:
 
 - @nestjs/cli
