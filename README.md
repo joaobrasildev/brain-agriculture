@@ -2,7 +2,7 @@
 
 [Refinamento Miro](https://miro.com/app/board/uXjVLwJJRCM=/?moveToWidget=3458764612521512499&cot=14).
 
-[Doc OpenApi](http://localhost:3000/api).
+[Doc OpenApi](https://brain-agriculture-app-f5f681bfb210.herokuapp.com/api).
 
 # Requirements:
 
