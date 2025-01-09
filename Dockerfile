@@ -8,6 +8,8 @@ COPY .env .env
 
 RUN npm install --production
 
+RUN npm db:migrate
+
 COPY . .
 
 EXPOSE 3000
