@@ -20,6 +20,7 @@ export class DeleteProducerService {
 
       await this.producerRepository.deleteproducerById(id);
     } catch (error) {
+      console.log(error);
       if (error instanceof NotFoundException) {
         throw error;
       }

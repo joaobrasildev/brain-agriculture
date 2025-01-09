@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "cd9aeb0e-7067-4f66-9407-6d8786d17518",
+		"name": "Brain Ag",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40211883"
+	},
+	"item": [
+		{
+			"name": "Producer",
+			"item": [
+				{
+					"name": "create-producer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"João Oliveira\",\n    \"documentId\": \"46575479000195\",\n    \"documentType\": \"CNPJ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/producers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"producers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-producer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"João Updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/producers/8c9371d7-3621-45cb-9538-3c760293c3bd",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"producers",
+								"8c9371d7-3621-45cb-9538-3c760293c3bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-producer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/producers/8a4c57df-60de-48b8-a17f-92a52a7956b1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"producers",
+								"8a4c57df-60de-48b8-a17f-92a52a7956b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farm",
+			"item": [
+				{
+					"name": "create-farm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Fazenda Brasil\",\n  \"producerId\": \"8c9371d7-3621-45cb-9538-3c760293c3bd\",\n  \"city\": \"Maringá\",\n  \"state\": \"Paraná\",\n  \"totalArea\": 7000,\n  \"agriculturalArea\": 5000,\n  \"vegetationArea\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/farms",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"farms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agricultural Crop",
+			"item": [
+				{
+					"name": "create-agricultural-crop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"harvest\": 2026,\n  \"crop\": \"RICE\",\n  \"farmId\": \"860401c1-a11b-4dad-b4ce-adf4480c46d4\",\n  \"landUse\": \"AGRICULTURAL\",\n  \"area\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/agricultural-crops",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"agricultural-crops"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

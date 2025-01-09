@@ -45,6 +45,7 @@ export class UpdateProducerService {
         updatedAt: producer.updatedAt,
       };
     } catch (error) {
+      console.log(error);
       if (
         error instanceof BadRequestException ||
         error instanceof NotFoundException

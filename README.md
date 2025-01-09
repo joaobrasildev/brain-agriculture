@@ -65,3 +65,10 @@ $ npm run test:db:setup
 ```bash
 $ npm run test:e2e
 ```
+
+# To Access production application
+- Use this URL: __https://brain-agriculture-app-f5f681bfb210.herokuapp.com__
+
+# Aditional information
+- To create Farm, is needed to provide a producerId, becouse it you need create one producer first.
+- To create Agricultural Crop, is needed to provida a farmId, becouse it you need create one farm first.

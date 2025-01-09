@@ -57,6 +57,7 @@ export class CreateFarmService {
         createdAt: farm.createdAt,
       };
     } catch (error) {
+      console.log(error);
       if (error instanceof NotFoundException || BadRequestException) {
         throw error;
       }

@@ -62,6 +62,7 @@ export class CreateAgriculturalCropService {
         createdAt: agriculturalCrops.createdAt,
       };
     } catch (error) {
+      console.log(error);
       if (error instanceof NotFoundException || BadRequestException) {
         throw error;
       }
