@@ -7,7 +7,7 @@ export class AgriculturalCropsModel {
   harvest: number;
   crop: ECrops;
   farmId: string;
-  landuse: ELandUse;
+  landUse: ELandUse;
   area: number;
   createdAt: Date;
   updatedAt: Date;

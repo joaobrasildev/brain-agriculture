@@ -10,7 +10,7 @@ import {
   ICreateProducerOutput,
 } from '../../interface/producer.interface';
 import { ProducerModel } from '../../model/producer.model';
-import { documentValidator } from '../../helper/document.validator';
+import { documentValidator } from '../../helper/document-validator.helper';
 import {
   documentInvalidResponseMessage,
   internalServerErrorResponseMessage,

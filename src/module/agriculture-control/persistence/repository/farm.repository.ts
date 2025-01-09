@@ -9,11 +9,23 @@ export class FarmRepository extends DefaultTypeOrmRepository<FarmEntity> {
   constructor(@Inject(DataSource) readonly dataSource: DataSource) {
     super(FarmEntity, dataSource);
   }
+
   async saveFarm(model: FarmModel): Promise<FarmModel> {
     const farm = this.modelToEntity(model);
     await this.repository.save(farm);
 
     return this.entityToModel(farm);
+  }
+
+  async getFarmById(id: string): Promise<FarmModel | undefined> {
+    const farm = await this.repository.findOne({
+      where: {
+        id,
+      },
+    });
+    if (!farm) return;
+
+    return farm;
   }
 
   async deleteAll(): Promise<void> {

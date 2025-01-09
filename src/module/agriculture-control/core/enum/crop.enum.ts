@@ -1,7 +1,7 @@
 export enum ECrops {
+  CORN = 'CORN',
   WHEAT = 'WHEAT',
   RICE = 'RICE',
-  CORN = 'CORN',
   BARLEY = 'BARLEY',
   OATS = 'OATS',
   SORGHUM = 'SORGHUM',

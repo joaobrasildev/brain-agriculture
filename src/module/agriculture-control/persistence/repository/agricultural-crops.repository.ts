@@ -27,6 +27,20 @@ export class AgriculturalCropsRepository extends DefaultTypeOrmRepository<Agricu
     return this.entityToModel(agriculturalCrops);
   }
 
+  async getTotalCultivatedAreaByFarmIdAndHarvest(
+    farmId: string,
+    harvest: number,
+  ): Promise<number> {
+    const result = await this.repository
+      .createQueryBuilder('agriculturalCrops')
+      .select('SUM(agriculturalCrops.area)', 'totalArea')
+      .where('agriculturalCrops.farmId = :farmId', { farmId })
+      .andWhere('agriculturalCrops.harvest = :harvest', { harvest })
+      .getRawOne();
+
+    return result?.totalArea ? Number(result.totalArea) : 0;
+  }
+
   async deleteagriculturalCropsById(id: string): Promise<void> {
     await this.repository.softDelete({ id });
   }
@@ -43,7 +57,7 @@ export class AgriculturalCropsRepository extends DefaultTypeOrmRepository<Agricu
       harvest: entity.harvest,
       crop: entity.crop,
       farmId: entity.farmId,
-      landuse: entity.landuse,
+      landUse: entity.landUse,
       area: entity.area,
       createdAt: entity.createdAt,
       updatedAt: entity.updatedAt,
@@ -59,7 +73,7 @@ export class AgriculturalCropsRepository extends DefaultTypeOrmRepository<Agricu
       harvest: model.harvest,
       crop: model.crop,
       farmId: model.farmId,
-      landuse: model.landuse,
+      landUse: model.landUse,
       area: model.area,
     });
   }
