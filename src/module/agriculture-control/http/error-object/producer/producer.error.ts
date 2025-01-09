@@ -4,11 +4,18 @@ import {
   documentInvalidResponseMessage,
   internalServerErrorResponseMessage,
   producerAlreadyExistsResponseMessage,
+  producerNotFoundResponseMessage,
 } from '@src/module/agriculture-control/core/const/producer.const';
+import { UpdateProducerResponseDto } from '../../dto/producer/reponse/update-producer-response.dto';
 
 export const createUserSuccessResponse = {
   status: HttpStatus.CREATED,
   type: CreateProducerResponseDto,
+};
+
+export const updateUserSuccessResponse = {
+  status: HttpStatus.OK,
+  type: UpdateProducerResponseDto,
 };
 
 export const badRequestResponse = {
@@ -16,10 +23,7 @@ export const badRequestResponse = {
   schema: {
     example: {
       statusCode: HttpStatus.BAD_REQUEST,
-      message: [
-        'documentType should not be empty',
-        'documentType must be one of the following values: CPF, CNPJ',
-      ],
+      message: ['name should not be empty', 'name must be a string'],
       error: 'Bad Request',
     },
   },
@@ -42,7 +46,18 @@ export const producerAlreadyExistsResponse = {
     example: {
       statusCode: HttpStatus.CONFLICT,
       message: producerAlreadyExistsResponseMessage,
-      error: 'Bad Request',
+      error: 'Conflict',
+    },
+  },
+};
+
+export const producerNotFoundResponse = {
+  status: HttpStatus.NOT_FOUND,
+  schema: {
+    example: {
+      statusCode: HttpStatus.NOT_FOUND,
+      message: producerNotFoundResponseMessage,
+      error: 'Not Found',
     },
   },
 };

@@ -13,7 +13,7 @@ import {
   producerAlreadyExistsResponseMessage,
 } from '../../../const/producer.const';
 
-describe('PaymentProcessService', () => {
+describe('CreateProducerService', () => {
   let createProducerService: CreateProducerService;
   let producerRepository: jest.Mocked<ProducerRepository>;
 

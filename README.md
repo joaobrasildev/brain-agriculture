@@ -48,7 +48,7 @@ $ npm run test
 
 # To run e2e test
 
-- Navigate to the src/module/transaction/\_\_test\_\_/e2e folder and RUN
+- Navigate to the src/module/agriculture-control/\_\_test\_\_ folder and RUN
 
 ```bash
 $ docker compose up -d

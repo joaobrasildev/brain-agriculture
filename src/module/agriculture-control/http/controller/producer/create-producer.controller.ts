@@ -31,7 +31,7 @@ export class CreateProcessController {
   @ApiResponse(documentInvalidResponse)
   @ApiResponse(producerAlreadyExistsResponse)
   @ApiResponse(internalServerErrorResponse)
-  async paymentProcess(
+  async createProducer(
     @Body() data: CreateProducerRequestDto,
   ): Promise<CreateProducerResponseDto> {
     const producer = await this.createProducerService.create(data);

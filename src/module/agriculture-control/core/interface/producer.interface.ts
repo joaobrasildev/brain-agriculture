@@ -13,3 +13,16 @@ export interface ICreateProducerOutput {
   documentType: EDocumentType;
   createdAt: Date;
 }
+
+export interface IUpdateProducerInput {
+  name: string;
+}
+
+export interface IUpdateProducerOutput {
+  id: string;
+  name: string;
+  documentId: string;
+  documentType: EDocumentType;
+  createdAt: Date;
+  updatedAt: Date;
+}
