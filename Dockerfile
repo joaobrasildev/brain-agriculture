@@ -8,9 +8,9 @@ COPY .env .env
 
 RUN npm install --production
 
-RUN npm db:migrate
-
 COPY . .
+
+RUN npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d ./database/typeorm/migration.datasource.ts
 
 EXPOSE 3000
 
