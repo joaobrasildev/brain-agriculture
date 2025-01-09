@@ -13,6 +13,10 @@ export const createUserSuccessResponse = {
   type: CreateProducerResponseDto,
 };
 
+export const deleteUserSuccessResponse = {
+  status: HttpStatus.NO_CONTENT,
+};
+
 export const updateUserSuccessResponse = {
   status: HttpStatus.OK,
   type: UpdateProducerResponseDto,

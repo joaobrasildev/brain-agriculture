@@ -4,10 +4,20 @@ import { CreateProducerService } from './core/service/producer/create-producer.s
 import { CreateProcessController } from './http/controller/producer/create-producer.controller';
 import { UpdateProducerService } from './core/service/producer/update-producer.service';
 import { UpdateProducerController } from './http/controller/producer/update-producer.controller';
+import { DeleteProducerService } from './core/service/producer/delete-producer.service';
+import { DeleteProducerController } from './http/controller/producer/delete-producer.controller';
 
 @Module({
   imports: [PersistenceModule.forRoot()],
-  providers: [CreateProducerService, UpdateProducerService],
-  controllers: [CreateProcessController, UpdateProducerController],
+  providers: [
+    CreateProducerService,
+    UpdateProducerService,
+    DeleteProducerService,
+  ],
+  controllers: [
+    CreateProcessController,
+    UpdateProducerController,
+    DeleteProducerController,
+  ],
 })
 export class AgricultureControlModule {}
