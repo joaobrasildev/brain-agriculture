@@ -16,17 +16,6 @@ export class FarmRepository extends DefaultTypeOrmRepository<FarmEntity> {
     return this.entityToModel(farm);
   }
 
-  async updateFarm(model: FarmModel): Promise<FarmModel> {
-    const farm = this.modelToEntity(model);
-    await this.repository.update({ id: model.id }, farm);
-
-    return this.entityToModel(farm);
-  }
-
-  async deletefarmById(id: string): Promise<void> {
-    await this.repository.softDelete({ id });
-  }
-
   async deleteAll(): Promise<void> {
     await this.repository.delete({});
   }
