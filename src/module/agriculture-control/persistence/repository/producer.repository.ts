@@ -47,6 +47,13 @@ export class ProducerRepository extends DefaultTypeOrmRepository<ProducerEntity>
     return producer;
   }
 
+  async getAllProducer(): Promise<ProducerModel[]> {
+    const producers = await this.repository.find();
+    if (!producers) return [];
+
+    return producers;
+  }
+
   async deleteproducerById(id: string): Promise<void> {
     await this.repository.softDelete({ id });
   }

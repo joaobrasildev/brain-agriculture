@@ -79,6 +79,23 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "get-all-producers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/producers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"producers"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -92,7 +109,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Fazenda Brasil\",\n  \"producerId\": \"8c9371d7-3621-45cb-9538-3c760293c3bd\",\n  \"city\": \"Maringá\",\n  \"state\": \"Paraná\",\n  \"totalArea\": 7000,\n  \"agriculturalArea\": 5000,\n  \"vegetationArea\": 2000\n}",
+							"raw": "{\n  \"name\": \"Fazenda Brasil BA 6\",\n  \"producerId\": \"8c9371d7-3621-45cb-9538-3c760293c3bd\",\n  \"city\": \"Salvador\",\n  \"state\": \"Bahia\",\n  \"totalArea\": 7000,\n  \"agriculturalArea\": 5000,\n  \"vegetationArea\": 2000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -123,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"harvest\": 2026,\n  \"crop\": \"RICE\",\n  \"farmId\": \"860401c1-a11b-4dad-b4ce-adf4480c46d4\",\n  \"landUse\": \"AGRICULTURAL\",\n  \"area\": 2000\n}",
+							"raw": "{\n  \"harvest\": 2025,\n  \"crop\": \"CHAMOMILE\",\n  \"farmId\": \"aa1f28ab-296c-4ce6-9c2c-77ea5c8877b7\",\n  \"landUse\": \"VEGETATION\",\n  \"area\": 1000\n}",
 							"options": {
 								"raw": {
 									"language": "json"

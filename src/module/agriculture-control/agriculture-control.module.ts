@@ -10,6 +10,8 @@ import { CreateFarmController } from './http/controller/farm/create-farm.control
 import { CreateFarmService } from './core/service/farm/create-farm.service';
 import { CreateAgriculturalCropController } from './http/controller/agricultural-crop/create-agricultural-crop.controller';
 import { CreateAgriculturalCropService } from './core/service/agricultural-crop/create-agricultural-crop.service';
+import { GetAllProducerController } from './http/controller/producer/get-all-producer.controller';
+import { GetAllProducerService } from './core/service/producer/get-all-producer.service';
 
 @Module({
   imports: [PersistenceModule.forRoot()],
@@ -19,6 +21,7 @@ import { CreateAgriculturalCropService } from './core/service/agricultural-crop/
     DeleteProducerService,
     CreateFarmService,
     CreateAgriculturalCropService,
+    GetAllProducerService,
   ],
   controllers: [
     CreateProcessController,
@@ -26,6 +29,7 @@ import { CreateAgriculturalCropService } from './core/service/agricultural-crop/
     DeleteProducerController,
     CreateFarmController,
     CreateAgriculturalCropController,
+    GetAllProducerController,
   ],
 })
 export class AgricultureControlModule {}

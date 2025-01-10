@@ -26,3 +26,12 @@ export interface IUpdateProducerOutput {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export interface IGetAllProducerOutput {
+  id: string;
+  name: string;
+  documentId: string;
+  documentType: EDocumentType;
+  createdAt: Date;
+  updatedAt: Date;
+}
