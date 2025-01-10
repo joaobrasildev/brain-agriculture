@@ -3,6 +3,7 @@ import { DataSource } from 'typeorm';
 import { DefaultTypeOrmRepository } from '@src/shared/persistence/typeorm/repository/default-typeorm.repository';
 import { AgriculturalCropsModel } from '../../core/model/agricultural-crops.model';
 import { AgriculturalCropsEntity } from '../entity/agricultural-crops.entity';
+import { ECrops } from '../../core/enum/crop.enum';
 
 @Injectable()
 export class AgriculturalCropsRepository extends DefaultTypeOrmRepository<AgriculturalCropsEntity> {
@@ -39,6 +40,23 @@ export class AgriculturalCropsRepository extends DefaultTypeOrmRepository<Agricu
       .getRawOne();
 
     return result?.totalArea ? Number(result.totalArea) : 0;
+  }
+
+  async getCulturalCropByCropAndFarmAndHarvest(
+    crop: ECrops,
+    farmId: string,
+    harvest: number,
+  ): Promise<AgriculturalCropsModel | undefined> {
+    const culturalCrop = await this.repository.findOne({
+      where: {
+        crop,
+        farmId,
+        harvest,
+      },
+    });
+    if (!culturalCrop) return;
+
+    return culturalCrop;
   }
 
   async deleteagriculturalCropsById(id: string): Promise<void> {

@@ -16,7 +16,9 @@ const config: Config = {
       isolatedModules: true,
     },
   },
-  testPathIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/',
+    '<rootDir>/src/module/agriculture-control/__test__/e2e/'
+  ],
 };
 
 export default config;

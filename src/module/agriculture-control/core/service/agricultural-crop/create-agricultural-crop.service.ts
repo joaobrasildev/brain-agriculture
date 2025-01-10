@@ -1,5 +1,6 @@
 import {
   BadRequestException,
+  ConflictException,
   Injectable,
   InternalServerErrorException,
   NotFoundException,
@@ -12,6 +13,7 @@ import {
   ICreateAgriculturalCropOutput,
 } from '../../interface/agricultural-crop.interface';
 import {
+  CropAlreadyExistsResponseMessage,
   farmNotFoundResponseMessage,
   invalidCropAreaResponseMessage,
 } from '../../const/agricultural-crop.const';
@@ -39,6 +41,15 @@ export class CreateAgriculturalCropService {
       if (farmExists.totalArea < params.area + totalCultivatedAreaByHarvest)
         throw new BadRequestException(invalidCropAreaResponseMessage);
 
+      const cropExistsInFarm =
+        await this.agriculturalCropRepository.getCulturalCropByCropAndFarmAndHarvest(
+          params.crop,
+          params.farmId,
+          params.harvest,
+        );
+      if (cropExistsInFarm)
+        throw new ConflictException(CropAlreadyExistsResponseMessage);
+
       const agriculturalCropsModel = new AgriculturalCropsModel({
         harvest: params.harvest,
         crop: params.crop,
@@ -63,7 +74,11 @@ export class CreateAgriculturalCropService {
       };
     } catch (error) {
       console.log(error);
-      if (error instanceof NotFoundException || BadRequestException) {
+      if (
+        error instanceof NotFoundException ||
+        BadRequestException ||
+        ConflictException
+      ) {
         throw error;
       }
       console.log(

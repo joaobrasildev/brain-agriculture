@@ -33,6 +33,7 @@ describe('CreateAgriculturalCropService', () => {
           useValue: {
             saveAgriculturalCrops: jest.fn(),
             getTotalCultivatedAreaByFarmIdAndHarvest: jest.fn(),
+            getCulturalCropByCropAndFarmAndHarvest: jest.fn(),
           },
         },
       ],
@@ -59,6 +60,9 @@ describe('CreateAgriculturalCropService', () => {
     );
     agriculturalCropRepository.saveAgriculturalCrops.mockResolvedValue(
       createAgriculturalCropResponseMock,
+    );
+    agriculturalCropRepository.getCulturalCropByCropAndFarmAndHarvest.mockResolvedValue(
+      undefined,
     );
 
     await createAgriculturalCropService.create(createAgriculturalCropInputMock);
