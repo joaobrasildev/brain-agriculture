@@ -8,7 +8,7 @@ import {
 } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import {
-  deleteUserSuccessResponse,
+  deleteProducerSuccessResponse,
   internalServerErrorResponse,
   producerNotFoundResponse,
 } from '../../error-object/producer/producer.error';
@@ -24,7 +24,7 @@ export class DeleteProducerController {
   @UseInterceptors()
   @ApiResponse(producerNotFoundResponse)
   @ApiResponse(internalServerErrorResponse)
-  @ApiResponse(deleteUserSuccessResponse)
+  @ApiResponse(deleteProducerSuccessResponse)
   async deleteProducer(@Param() params: DeleteProducerIdRequestDto) {
     const id = params.id;
 

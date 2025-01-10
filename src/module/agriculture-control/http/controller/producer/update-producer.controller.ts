@@ -14,7 +14,7 @@ import {
   documentInvalidResponse,
   internalServerErrorResponse,
   producerNotFoundResponse,
-  updateUserSuccessResponse,
+  updateProducerSuccessResponse,
 } from '../../error-object/producer/producer.error';
 import { UpdateProducerService } from '@src/module/agriculture-control/core/service/producer/update-producer.service';
 import {
@@ -30,7 +30,7 @@ export class UpdateProducerController {
   @Patch(':id')
   @HttpCode(HttpStatus.OK)
   @UseInterceptors()
-  @ApiResponse(updateUserSuccessResponse)
+  @ApiResponse(updateProducerSuccessResponse)
   @ApiResponse(badRequestResponse)
   @ApiResponse(documentInvalidResponse)
   @ApiResponse(producerNotFoundResponse)

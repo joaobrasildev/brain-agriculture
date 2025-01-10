@@ -7,21 +7,26 @@ import {
   producerNotFoundResponseMessage,
 } from '@src/module/agriculture-control/core/const/producer.const';
 import { UpdateProducerResponseDto } from '../../dto/producer/reponse/update-producer-response.dto';
+import { GetAllProducerResponseDto } from '../../dto/producer/reponse/get-all-producer-response.dto';
 
-export const createUserSuccessResponse = {
+export const createProducerSuccessResponse = {
   status: HttpStatus.CREATED,
   type: CreateProducerResponseDto,
 };
 
-export const deleteUserSuccessResponse = {
+export const deleteProducerSuccessResponse = {
   status: HttpStatus.NO_CONTENT,
 };
 
-export const updateUserSuccessResponse = {
+export const updateProducerSuccessResponse = {
   status: HttpStatus.OK,
   type: UpdateProducerResponseDto,
 };
 
+export const getAllProducerSuccessResponse = {
+  status: HttpStatus.OK,
+  type: GetAllProducerResponseDto,
+};
 export const badRequestResponse = {
   status: HttpStatus.BAD_REQUEST,
   schema: {

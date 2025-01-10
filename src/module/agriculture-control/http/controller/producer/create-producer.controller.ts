@@ -13,7 +13,7 @@ import { CreateProducerResponseDto } from '../../dto/producer/reponse/create-pro
 import { CreateProducerService } from '@src/module/agriculture-control/core/service/producer/create-producer.service';
 import {
   badRequestResponse,
-  createUserSuccessResponse,
+  createProducerSuccessResponse,
   documentInvalidResponse,
   internalServerErrorResponse,
   producerAlreadyExistsResponse,
@@ -26,7 +26,7 @@ export class CreateProcessController {
   @Post()
   @HttpCode(HttpStatus.CREATED)
   @UseInterceptors()
-  @ApiResponse(createUserSuccessResponse)
+  @ApiResponse(createProducerSuccessResponse)
   @ApiResponse(badRequestResponse)
   @ApiResponse(documentInvalidResponse)
   @ApiResponse(producerAlreadyExistsResponse)
