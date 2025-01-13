@@ -1,8 +1,8 @@
 # Links
 
-[Refinamento Miro](https://miro.com/app/board/uXjVLwJJRCM=/?moveToWidget=3458764612521512499&cot=14).
+[Refinamento Miro](https://miro.com/app/board/uXjVLwJJRCM=/?moveToWidget=3458764612521512499&cot=14)
 
-[Doc OpenApi](https://brain-agriculture-app-f5f681bfb210.herokuapp.com/api).
+[Doc OpenApi](https://brain-agriculture-app-f5f681bfb210.herokuapp.com/api)
 
 [Dashboard Total de Fazendas](https://jb-tecnology.metabaseapp.com/public/dashboard/cc8c54ab-a2de-40be-8253-3a5a809f4a38)
 
@@ -16,7 +16,7 @@
 
 # To run project
 ```bash
-$ git checkout develop
+$ git checkout master
 ```
 
 ```bash
