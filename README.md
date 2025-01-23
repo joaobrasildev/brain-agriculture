@@ -4,9 +4,14 @@
 
 [Doc OpenApi](https://brain-agriculture-app-f5f681bfb210.herokuapp.com/api)
 
-[Dashboard Total de Fazendas](https://jb-tecnology.metabaseapp.com/public/dashboard/cc8c54ab-a2de-40be-8253-3a5a809f4a38)
+[Dashboard Total de Fazendas (desativado devido aos custos)](https://jb-tecnology.metabaseapp.com/public/dashboard/cc8c54ab-a2de-40be-8253-3a5a809f4a38)
 
-[Dashboard Total de Hectares](https://jb-tecnology.metabaseapp.com/public/dashboard/9a33594c-0949-4b01-906c-1e2bc49f8a31)
+[Dashboard Total de Hectares (desativado devido aos custos)](https://jb-tecnology.metabaseapp.com/public/dashboard/9a33594c-0949-4b01-906c-1e2bc49f8a31)
+
+![Dashboard Total de Fazendas](asset/total-fazendas.png)
+
+![Dashboard Total de Hectares](asset/total-hectares.png)
+
 
 # Requirements:
 
@@ -70,7 +75,7 @@ $ npm run test:db:setup
 $ npm run test:e2e
 ```
 
-# To Access production application
+# To Access production application (Desabilitado momentaneamente em razão dos custos)
 - Use this URL: __https://brain-agriculture-app-f5f681bfb210.herokuapp.com__
 
 # Aditional information
